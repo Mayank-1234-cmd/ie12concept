@@ -1,0 +1,129 @@
+@bodybg: #cfeb5d;
+
+@windowbg: rgb(116, 173, 156);
+@windowbg-border: darken(@windowbg, 5%);
+@window-bg-trans: rgba(116, 173, 156, 0.5);
+
+@font-family: 'Segoe UI', Tahoma, sans-serif;
+@font-size: 14px;
+@window-shadow: 0px 4px 6px rgba(0,0,0,.4);
+@close-hover: #e04343;
+@ie-opacity: 0.55;
+@ie-opacity-hover: 0.8;
+@ie-opacity-active: 1;
+@ie-tab-height: 34px;
+
+.favicon {
+    vertical-align: middle;
+    margin-top: -6px;
+}
+
+.btn-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;    
+}
+
+.btn-group-btn {
+    display: inline-block;
+    position: relative;
+    float: left;  
+    border: none;
+}
+
+::-ms-clear {
+    display: none;
+}
+
+*:focus {
+    outline: none !important;
+}
+
+body {
+    background: @bodybg url(images/bg.png);
+    background-size: 100%;
+    font-family: @font-family;
+    font-size: @font-size;
+    cursor: default;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+a {
+    color: lighten(rgb(22, 91, 168), 40%);
+}
+a:hover {
+    color: lighten(rgb(22, 91, 168), 50%);
+}
+
+@import 'window.less';
+
+.ie {
+    padding: 20px 6px 0 6px;
+    
+    .ie-nav {
+        .btn-group;
+        float: left;
+        margin-right: 2px;
+
+        .ie-nav-btn {
+            .btn-group-btn;
+            background: transparent bottom no-repeat;
+            height: 36px;
+            opacity: @ie-opacity;
+        }
+
+        .ie-prev {
+            width: 39px;
+            background-image: url(images/ie-nav/prev.png);
+        }
+
+        .ie-next {
+            width: 30px;
+            background-image: url(images/ie-nav/next.png);
+        }    
+    } /* ie-nav */   
+    
+    .ie-menu {
+        position: absolute;
+        right: 0px;
+        margin-top: 6px;
+        
+        .ie-menu-point {
+            width: 24px;
+            height: 24px;
+            background: no-repeat center center;
+            display: inline-block;
+            position: relative;
+            float: left;
+            opacity: @ie-opacity;
+        }
+        .ie-menu-point:hover {
+            opacity: 1;
+        }
+        
+        .ie-menu-info {
+            background-image: url(images/ie-nav/info.png);
+        }
+        
+        .ie-menu-fav {
+            background-image: url(images/ie-nav/star.png);
+        }
+        
+        .ie-menu-options {
+            background-image: url(images/ie-nav/gearwheel.png);
+        }
+    }
+} /* ie */
+
+@import "ie-tabs.less";
+
+@import "taskbar.less";
+
+#layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

@@ -1,0 +1,385 @@
+.favicon {
+  vertical-align: middle;
+  margin-top: -6px;
+}
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+.btn-group-btn {
+  display: inline-block;
+  position: relative;
+  float: left;
+  border: none;
+}
+::-ms-clear {
+  display: none;
+}
+*:focus {
+  outline: none !important;
+}
+body {
+  background: #cfeb5d url(images/bg.png);
+  background-size: 100%;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  overflow: hidden;
+  max-width: 100%;
+}
+a {
+  color: #98c3f2;
+}
+a:hover {
+  color: #c6ddf7;
+}
+.window {
+  background-color: #74ad9c;
+  position: fixed;
+  width: 1300px;
+  height: 768px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  border: 1px solid #64a491;
+  z-index: 2;
+}
+.window.maximized {
+  width: 100%;
+  height: calc(100% - 40px);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute !important;
+  z-index: 3;
+}
+.window.maximized .window-maximize {
+  width: 25px;
+  background-image: url(images/window-options/maximize-1.png);
+}
+.window.maximized .window-maximize:hover {
+  background-image: url(images/window-options/maximize-2.png);
+}
+.window.snapped {
+  position: fixed !important;
+  width: 50%;
+  top: 0px !important;
+  height: calc(100% - 40px);
+}
+.window.snapped.left {
+  left: 0px !important;
+}
+.window.snapped.right {
+  right: 0px !important;
+  left: auto !important;
+}
+.droppable {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  background-color: yellow;
+  cursor: pointer;
+  top: 0;
+}
+.droppable.left {
+  left: -50%;
+}
+.droppable.right {
+  right: -50%;
+}
+.window.inactive {
+  background-color: #ebebeb;
+  border-color: #d3d3d3;
+  box-shadow: none;
+  z-index: 1;
+}
+.window.inactive .window-close {
+  background-color: #bcbcbc;
+}
+.window.inactive .window-close:hover {
+  background-color: #e04343;
+}
+.window.inactive.pause {
+  z-index: 2;
+}
+.website-frame {
+  border: none;
+  width: 100%;
+  height: calc(100% - 56px);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.window-options {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.window-option {
+  background: no-repeat center center;
+  min-height: 20px;
+  margin-left: 1px;
+  display: inline-block;
+  position: relative;
+  float: left;
+  border: none;
+}
+.window-minimize {
+  width: 26px;
+  background-image: url(images/window-options/minimize-1.png);
+}
+.window-minimize:hover {
+  background-image: url(images/window-options/minimize-2.png);
+}
+.window-maximize {
+  width: 25px;
+  background-image: url(images/window-options/maximize-3.png);
+}
+.window-maximize:hover {
+  background-image: url(images/window-options/maximize-4.png);
+}
+.window-minimize:hover,
+.window-maximize:hover {
+  background-color: #3665b3;
+}
+.window-close {
+  width: 45px;
+  background-image: url(images/window-options/close.png);
+  background-color: #c75050;
+}
+.window-close:hover {
+  background-color: #e04343;
+}
+.ie {
+  padding: 20px 6px 0 6px;
+  /* ie-nav */
+}
+.ie .ie-nav {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+  margin-right: 2px;
+}
+.ie .ie-nav .ie-nav-btn {
+  display: inline-block;
+  position: relative;
+  float: left;
+  border: none;
+  background: transparent bottom no-repeat;
+  height: 36px;
+  opacity: 0.55;
+}
+.ie .ie-nav .ie-prev {
+  width: 39px;
+  background-image: url(images/ie-nav/prev.png);
+}
+.ie .ie-nav .ie-next {
+  width: 30px;
+  background-image: url(images/ie-nav/next.png);
+}
+.ie .ie-menu {
+  position: absolute;
+  right: 0px;
+  margin-top: 6px;
+}
+.ie .ie-menu .ie-menu-point {
+  width: 24px;
+  height: 24px;
+  background: no-repeat center center;
+  display: inline-block;
+  position: relative;
+  float: left;
+  opacity: 0.55;
+}
+.ie .ie-menu .ie-menu-point:hover {
+  opacity: 1;
+}
+.ie .ie-menu .ie-menu-info {
+  background-image: url(images/ie-nav/info.png);
+}
+.ie .ie-menu .ie-menu-fav {
+  background-image: url(images/ie-nav/star.png);
+}
+.ie .ie-menu .ie-menu-options {
+  background-image: url(images/ie-nav/gearwheel.png);
+}
+/* ie */
+.ie-tabs .ie-tab {
+  margin-top: 2px;
+  margin-right: 1px;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.55);
+  height: 34px;
+  line-height: 34px;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+.ie-tabs .ie-tab .ie-tab-favicon {
+  vertical-align: middle;
+  margin-top: -6px;
+}
+.ie-tabs .ie-tab .ie-tab-address {
+  display: none;
+}
+.ie-tabs .ie-tab:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.ie-tabs .ie-tab:hover .ie-tab-close {
+  display: block;
+}
+.ie-tabs .ie-tab.active,
+.ie-tabs .ie-tab.active:hover,
+.ie-tabs .ie-tab.active:focus {
+  background-color: #ffffff;
+}
+.ie-tabs .ie-tab.active .ie-tab-favicon,
+.ie-tabs .ie-tab.active:hover .ie-tab-favicon,
+.ie-tabs .ie-tab.active:focus .ie-tab-favicon,
+.ie-tabs .ie-tab.active .ie-tab-label,
+.ie-tabs .ie-tab.active:hover .ie-tab-label,
+.ie-tabs .ie-tab.active:focus .ie-tab-label {
+  cursor: text;
+  text-transform: capitalize;
+}
+.ie-tabs .ie-tab.active .ie-tab-close,
+.ie-tabs .ie-tab.active:hover .ie-tab-close,
+.ie-tabs .ie-tab.active:focus .ie-tab-close {
+  display: block;
+}
+.ie-tabs .ie-tab.change {
+  width: 500px;
+}
+.ie-tabs .ie-tab.change .ie-tab-favicon,
+.ie-tabs .ie-tab.change .ie-tab-label {
+  display: none;
+}
+.ie-tabs .ie-tab.change .ie-tab-address {
+  display: block;
+}
+.ie-tabs .ie-tab.change .ie-tab-address-favicon {
+  vertical-align: middle;
+  margin-top: -6px;
+}
+.ie-tabs .ie-tab.change .ie-tab-address-input {
+  border: none;
+  width: 450px;
+}
+.ie-tabs .ie-tab.change .ie-tab-close {
+  display: none !important;
+}
+.ie-tabs .ie-tab-close {
+  width: 14px;
+  height: 34px;
+  vertical-align: middle;
+  background: url(images/tab/close.png) no-repeat center center;
+  position: absolute;
+  right: 7px;
+  display: none;
+}
+.ie-tabs .ie-tab-close:hover {
+  background-image: url(images/tab/close-hover.png);
+}
+.ie-tabs .ie-tab-new {
+  width: 34px;
+  min-width: 34px;
+}
+.ie-tabs .ie-tab-new:hover {
+  background-image: url(images/tab/new-tab.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* ie-tabs */
+#taskbar {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(116, 173, 156, 0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#taskbar > * {
+  display: inline-block;
+}
+#taskbar #taskbar-startmenu {
+  position: fixed;
+  bottom: calc(39px);
+  background-color: #457667;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #3c6659;
+  border-left: none;
+  display: none;
+}
+#taskbar #taskbar-windows {
+  position: relative;
+  width: 50px;
+  height: 40px;
+  background: url(images/taskbar/windows.png) no-repeat center center;
+}
+#taskbar #taskbar-windows:hover {
+  background-color: #111111;
+}
+#taskbar #taskbar-windows.active,
+#taskbar #taskbar-windows.active:hover #taskbar-windows.active:focus {
+  background-color: #457667;
+}
+#taskbar .task {
+  width: 60px;
+  height: 40px;
+  background: no-repeat center center;
+}
+#taskbar .task:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+#taskbar .task.active {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+#taskbar .task.open {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#taskbar .task.active:hover,
+#taskbar .task.open:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+#taskbar #task-ie {
+  background-image: url(images/taskbar/ie.png);
+}
+#taskbar #task-word {
+  background-image: url(images/taskbar/word.png);
+}
+#taskbar #task-info {
+  background-image: url(images/taskbar/info.png);
+}
+#taskbar #taskbar-time {
+  float: right;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9em;
+  min-width: 100px;
+  margin-top: 2px;
+}
+#fullscreen-info {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: fixed;
+  right: 20px;
+  bottom: 60px;
+  max-width: 200px;
+  padding: 15px;
+  display: none;
+  z-index: 1;
+}
+#layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+/*# sourceMappingURL=main.css.map */

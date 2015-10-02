@@ -1,0 +1,94 @@
+.ie-tabs {
+
+    .ie-tab {
+        margin-top: 2px;
+        margin-right: 1px;
+        float: left;
+        background-color: rgba(255,255,255, @ie-opacity);
+        height: @ie-tab-height;
+        line-height: @ie-tab-height;
+        min-width: 200px;
+        text-align: center;
+        position: relative;
+
+        .ie-tab-favicon {
+            .favicon;
+        }
+
+        .ie-tab-address {
+            display: none;
+        }
+    }
+    .ie-tab:hover {
+        background-color: rgba(255,255,255, @ie-opacity-hover);
+
+        .ie-tab-close {
+            display: block;
+        }
+    }
+
+    .ie-tab.active,
+    .ie-tab.active:hover,
+    .ie-tab.active:focus {
+        background-color: rgba(255,255,255, @ie-opacity-active);
+
+        .ie-tab-favicon,
+        .ie-tab-label {
+            cursor: text;
+            text-transform: capitalize;
+        }
+
+        .ie-tab-close {
+            display: block;
+        }
+    }
+
+    .ie-tab.change {
+        width: 500px;
+
+        .ie-tab-favicon,
+        .ie-tab-label {
+            display: none;
+        }  
+
+        .ie-tab-address {
+            display: block;
+        }
+
+        .ie-tab-address-favicon {
+            .favicon;
+        }
+
+        .ie-tab-address-input {
+            border: none;
+            width: 450px;
+        }
+
+        .ie-tab-close {
+            display: none !important;
+        }
+    }
+
+    .ie-tab-close {
+        width: 14px;
+        height: @ie-tab-height;
+        vertical-align: middle;
+        background: url(images/tab/close.png) no-repeat center center;
+        position: absolute;
+        right: 7px;
+        display: none;
+    }
+    .ie-tab-close:hover {
+        background-image: url(images/tab/close-hover.png);
+    }
+
+    .ie-tab-new {
+        width: @ie-tab-height;
+        min-width: @ie-tab-height;
+    }
+    .ie-tab-new:hover {
+        background-image: url(images/tab/new-tab.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+} /* ie-tabs */

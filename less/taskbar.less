@@ -1,0 +1,99 @@
+@taskbar-height: 40px;
+
+#taskbar {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    z-index: 2;
+    background-color: @window-bg-trans;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    > * {
+        display: inline-block;
+    }
+    
+    #taskbar-startmenu {
+        position: fixed;
+        bottom: calc(@taskbar-height - 1);
+        background-color: darken(@windowbg, 20%);
+        color: #fff;
+        padding: 15px;
+        border: 1px solid darken(@windowbg-border, 20%);
+        border-left: none;
+        display: none;
+    }
+    
+    #taskbar-windows {
+        position: relative;
+        width: 50px;
+        height: @taskbar-height;
+        background: url(images/taskbar/windows.png) no-repeat center center;
+    }
+    #taskbar-windows:hover {
+        background-color: #111111;
+    }
+    
+    #taskbar-windows.active,
+    #taskbar-windows.active:hover
+    #taskbar-windows.active:focus {
+        background-color: darken(@windowbg, 20%);
+    }
+    
+    .task {
+        width: 60px;
+        height: @taskbar-height;
+        background: no-repeat center center;
+    }
+    .task:hover {
+        background-color: rgba(255,255,255,.1);
+    }
+    
+    .task.active {
+        background-color: rgba(255,255,255,.35);
+    }
+    
+    .task.open {
+        background-color: rgba(255,255,255,.2);
+    }
+    
+    .task.active:hover,
+    .task.open:hover {
+        background-color: rgba(255,255,255,.5);
+    }
+    
+    #task-ie {
+        background-image: url(images/taskbar/ie.png);
+    }
+    
+    #task-word {
+        background-image: url(images/taskbar/word.png);
+    }
+    
+    #task-info {
+        background-image: url(images/taskbar/info.png);
+    }
+    
+    #taskbar-time {
+        float: right;
+        text-align: center;
+        color: #fff;
+        font-size: 0.9em;
+        min-width: 100px;
+        margin-top: 2px;
+    }
+}
+
+
+#fullscreen-info {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    position: fixed;
+    right: 20px;
+    bottom: @taskbar-height + 20;
+    max-width: 200px;
+    padding: 15px;
+    display: none;
+    z-index: 1;
+}
